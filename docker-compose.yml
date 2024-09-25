@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  inkplate-monitor:
+    image: louislam/uptime-kuma:1
+    container_name: inkplate-monitor
+    volumes:
+      - ./inkplate-monitor-data:/app/data
+    ports:
+      - 3001:3001  # <Host Port>:<Container Port>
+    restart: always
